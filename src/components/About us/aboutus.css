@@ -1,0 +1,75 @@
+.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+  }
+  
+  .left {
+    flex: 1;
+    padding: 2rem;
+    text-align: left;
+    align-self: center;
+    margin-right: 5rem;
+  }
+  
+  .right {
+    flex: 1;
+    text-align: center;
+    position: relative;
+  }
+  
+  .right img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .right::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    right: -25px;
+    bottom: -25px;
+    border-radius: 5px;
+    background-color: rgba(31, 54, 255, 0.1);
+    z-index: -1;
+  }
+  
+  h1 {
+    border-bottom: 2px solid #000;
+    margin-bottom: 1rem;
+    display: inline-block; /* Make the heading inline-block */
+    font-size: 1.2rem; /* Slightly increase font size */
+  }
+  
+  ul {
+    list-style-type: disc; /* Use discs for list markers */
+    margin-left: 20px; /* Indent the list */
+  }
+  
+  @media screen and (max-width: 768px) { 
+    .about {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .left,
+    .right {
+      flex: 1;
+      margin: 1rem 0;
+      text-align: center;
+    }
+  
+    .right img {
+      width: 100%; 
+    }
+  
+    h1 {
+      text-align: center; /* Center the heading on smaller screens */
+      font-size: 1.1rem; /* Adjust font size for smaller screens */
+    }
+  }
