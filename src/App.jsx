@@ -6,7 +6,8 @@ import About from '../src/components/About us/Aboutus'
 function App() {
   return (
     <>
-      
+    < Navbar />  
+    < About />    
     </>
   );
 }
