@@ -4,7 +4,10 @@ import './navbar.css';
 function Navbar() {
   return (
     <header className="glass-navbar">
-      <div className="logo">MyLogo</div>
+      <div className="logo">
+        <img src="src/components/Img/logo.png" alt="Your Logo" /> 
+        
+      </div>
       <nav className="nav-links">
         <button className="nav-button">Home</button>
         <button className="nav-button">About Us</button>
