@@ -19,10 +19,11 @@
   .logo {
     display: flex; /* Allow for flexbox within logo */
     align-items: center; /* Center vertically */
+    height: 100px;
   }
   
   .logo img { 
-    width: 50px; /* Adjust image size as needed */
+    width: 100px; /* Adjust image size as needed */
     margin-right: 10px; /* Optional spacing between image and text */
   }
   
