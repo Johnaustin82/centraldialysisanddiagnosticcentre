@@ -18,12 +18,12 @@
 .logo {
   display: flex; /* Allow for flexbox within logo */
   align-items: center; /* Center vertically */
-  height: 50%;
-  padding: 30px;
+  height: 100px; 
+  padding:  60px; /* Removed vertical padding */
 }
 
 .logo img { 
-  width: 100px; /* Adjust image size as needed */
+  width: 150px; /* Increased logo size */ 
   margin-right: 10px; /* Optional spacing between image and text */
 }
 
