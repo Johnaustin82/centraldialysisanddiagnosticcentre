@@ -12,34 +12,28 @@ const AboutUs = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) =>
-        (prevIndex + 1) % images.length
-      );
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 3000); // Change image every 3 seconds
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="container">
-      <div className="about">
-        <div className="left">
-          <h1 className='About'>About us</h1>
-          <hr />
-          <p>We are specialized in Dialysis and customized Service to Kidney patients in a caring way.</p>
-
-          <p>We currently have 6 dialysis machines which are fully working.</p>
-          <ul>
-            <li>1 Doctor</li>
-            <li>1 Clinical Officer</li>
-            <li>4 Nurses</li>
-          </ul> 
-        </div>
-        <div className="right">
-          <img src={images[currentImageIndex]} alt="About us image" />
-        </div>
+    <section className="about-section"> 
+      <div className="about-text">
+        <h2 className="about-heading">About Us</h2>
+        <p className="about-text-content">We are specialized in Dialysis and customized Service to Kidney patients in a caring way.</p>
+        <p className="about-text-content">We currently have 6 dialysis machines which are fully working.</p>
+        <ul className="about-list">
+          <li>1 Doctor</li>
+          <li>1 Clinical Officer</li>
+          <li>4 Nurses</li>
+        </ul>
       </div>
-    </div>
+      <div className="about-image-container">
+        <img src={images[currentImageIndex]} alt="About us image" />
+      </div>
+    </section>
   );
 };
 
