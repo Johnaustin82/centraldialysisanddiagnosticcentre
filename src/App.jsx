@@ -1,16 +1,17 @@
 import React from 'react';
 import './App.css';
-import Navbar from '../src/components/Navbar/Navbar'
-import About from '../src/components/About us/Aboutus'
-import Requirements from './components/Requirements/Requirements';
-import Extras from './components/Extras/Extras'
+import Homepage from './components/Homepage';
+import Map from './components/Map';
+import Footer from './components/footer';
+
+
 
 function App() {
   return (
     <>
-    
-    
-    
+      <Homepage/>
+      <Map/>
+      <Footer/>
     </>
   );
 }
