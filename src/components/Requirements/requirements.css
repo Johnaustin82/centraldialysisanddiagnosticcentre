@@ -1,0 +1,62 @@
+.requirements-container {
+  font-family: Arial, sans-serif;
+  background-color: #fce4ec; /* Light pink background */
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  text-align: left;
+  display: flex; /* Center the content */
+  flex-direction: column; /* Align content vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  position: relative; /* To position the image in the corner */
+}
+
+.image-container {
+  position: absolute;
+  top: 20px; /* Adjust the spacing as needed */
+  left: 20px; /* Adjust the spacing as needed */
+}
+
+.top-right-image {
+  width: 100px; /* Responsive size for the image */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image fits nicely */
+}
+
+.requirements-header h1 {
+  color: #3a363f; /* Dark gray */
+  text-align: center;
+  font-size: 2.5rem; /* Scales better on smaller devices */
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.requirements-list {
+  list-style-type: disc;
+  color: #000000;
+  font-size: 1.25rem; /* Responsive font size */
+  line-height: 1.6;
+  padding-left: 20px;
+  max-width: 600px; /* Limit the list's width */
+  margin: 0 auto; /* Center the list */
+}
+
+.requirements-list .note {
+  color: #d50000; /* Red for emphasis */
+  font-size: 1rem; /* Responsive font size */
+}
+
+@media (max-width: 768px) {
+  .requirements-header h1 {
+    font-size: 1.8rem; /* Smaller font size for smaller devices */
+  }
+
+  .requirements-list {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .top-right-image {
+    width: 80px; /* Smaller image for smaller screens */
+  }
+}
