@@ -17,7 +17,7 @@ function Homepage() {
           <Navbar /> 
           {/* Text container */}
           <div className="absolute inset-y-1/2 left-12 transform -translate-y-1/2">
-            <h1 className="text-6xl font-bold font-montserrat text-blue-600"> {/* Changed text-4xl to text-6xl, added font-montserrat, and text-blue-700 */}
+            <h1 className="text-6xl font-bold font-montserrat text-blue-800"> {/* Changed text-4xl to text-6xl, added font-montserrat, and text-blue-700 */}
               Compassionate care for<br/>every Kidney Journey
             </h1>
           </div>
