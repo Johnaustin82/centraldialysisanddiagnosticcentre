@@ -13,21 +13,17 @@ const Footer = () => {
             <br/>
             Trust us for your dialysis needs.
           </p>
-          <div className="flex mt-4 space-x-4">
-            <a href="/" className="text-gray-300 hover:text-white">
-              <i className="fab fa-instagram"></i>
-            </a>
-            <a href="/" className="text-gray-300 hover:text-white">
-              <i className="fab fa-facebook"></i>
-            </a>
-            <a href="/" className="text-gray-300 hover:text-white">
-              <i className="fab fa-x-twitter"></i>
-            </a>
-            <a href="/" className="text-gray-300 hover:text-white">
-              <i className="fab fa-pinterest"></i>
-            </a>
-          </div>
         </div>
+
+        <div>
+            <h2 className="text-underlined">Quick links</h2>
+            <ul>
+            <li><a href="" className="hover:text-white">Home</a></li>
+            <li><a href="" className="hover:text-white">About</a></li>
+            <li><a href="" className="hover:text-white">Location</a></li>
+            </ul>
+        </div>
+
         <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-16">
           
           <div>
