@@ -1,29 +1,3 @@
-// import React from 'react';
-// import Navbar from './Navbar/Navbar';
-
-// function Homepage() {
-//   return (
-//     <>
-//     <Navbar/>
-//     <div
-//       className="relative w-full h-screen overflow-hidden"
-//       style={{
-//         backgroundImage: "url('src/components/Img/home.jpg')",
-//       }}
-//     >
-//       <div className="absolute inset-0 "></div>
-//       <div>
-//         <div className=" text-black">
-//           <h1 className="text-4xl font-bold mb-4">Compassianate care for every Kidney Journey</h1>
-//         </div>
-//       </div>
-//     </div>
-//     </>
-//   );
-// }
-
-// export default Homepage;
-
 import React from 'react';
 import Navbar from './Navbar/Navbar';
 

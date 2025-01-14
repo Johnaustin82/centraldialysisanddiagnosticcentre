@@ -74,7 +74,8 @@
   
   .group:hover .profile-picture {
     transform: scale(0.9) translate(-96px, -80px);
-    margin-bottom: -80px;
+    margin-bottom: -140px;
+    margin-left: -40px;
     
   }
   
