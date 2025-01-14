@@ -24,7 +24,7 @@ const AboutUs = () => {
     <div className="container">
       <div className="about">
         <div className="left">
-          <h1>About us</h1>
+          <h1 className='About'>About us</h1>
           <hr />
           <p>We are specialized in Dialysis and customized Service to Kidney patients in a caring way.</p>
 
