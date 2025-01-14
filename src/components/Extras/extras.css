@@ -1,0 +1,112 @@
+/* Container for all cards */
+.extras-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between the cards */
+    flex-wrap: wrap; /* Ensure responsiveness */
+    padding: 20px;
+  }
+  
+  /* Card styles */
+  .group {
+    position: relative;
+    width: 320px;
+    height: 288px;
+    background-color: #eaebec; /* Light background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  
+  .group::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 320px;
+    height: 96px;
+    background: #7cc4f8; /* Gradient background */
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    transition: all 0.5s ease;
+  }
+  
+  .group:hover::before {
+    width: 320px;
+    height: 288px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+  
+  /* Profile picture styles */
+  .profile-picture {
+    position: relative;
+    width: 112px;
+    height: 112px;
+    margin-top: 32px;
+    border-radius: 50%;
+    border: 4px solid #f8fafc; /* Light border */
+    background-color: #0c8ce9; /* Background color */
+    overflow: hidden; /* Ensures image fits within the circle */
+    z-index: 10;
+    transition: all 0.5s ease;
+  }
+  
+  .profile-picture img {
+    position: absolute;
+    top: 25;
+    left: 25;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image scales properly */
+    opacity: 0.8; /* Semi-transparent image */
+    transition: opacity 0.3s ease;
+  }
+  
+  .profile-picture:hover img {
+    opacity: 1; /* Fully visible on hover */
+  }
+  
+  .group:hover .profile-picture {
+    transform: scale(0.9) translate(-96px, -80px);
+    margin-bottom: -80px;
+    
+  }
+  
+  .profile-details {
+    z-index: 10;
+    transition: all 0.5s ease;
+  }
+  
+  .group:hover .profile-details {
+    transform: translateY(-20px);
+  }
+  
+  .profile-name {
+    font-size: 1.25rem; /* Large font size */
+    font-weight: 600; /* Bold font */
+    color: #000;
+  }
+  
+  .profile-role {
+    color: #6b7280; /* Gray font */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .extras-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .group {
+      width: 90%;
+      height: auto;
+    }
+  }
+  
