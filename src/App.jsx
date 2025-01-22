@@ -12,12 +12,20 @@ import Extras from './components/Extras/Extras';
 function App() {
   return (
     <>
-      <section><Homepage/></section>
-      <section><AboutUs/></section>
-      <section><Requirements/></section>
-      <section><Extras/></section>
-      <section><Map/></section>
-      <section><Footer/></section>
+      <section id="homepage-section">
+        <Homepage />
+      </section>
+      <section id="aboutus-section">
+        <AboutUs />
+        <Requirements />
+        <Extras />
+      </section>
+      <section id="map-section">
+        <Map />
+      </section>
+      <section id="footer-section">
+        <Footer />
+      </section>
     </>
   );
 }

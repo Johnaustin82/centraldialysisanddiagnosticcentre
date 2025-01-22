@@ -30,10 +30,10 @@ function Navbar() {
       </div>
       <nav className="nav-links">
         <ul className="hidden md:flex"> {/* Hide on small screens */}
-          <li><a href="#" className="nav-button">Home</a></li>
-          <li><a href="#" className="nav-button">About Us</a></li>
-          <li><a href="#" className="nav-button">Contact Us</a></li>
-          <li><a href="#" className="nav-button">Location</a></li>
+          <li><a href="#homepage-section" className="nav-button">Home</a></li>
+          <li><a href="#aboutus-section" className="nav-button">About Us</a></li>
+          <li><a href="#footer-section" className="nav-button">Contact Us</a></li>
+          <li><a href="#map-section" className="nav-button">Location</a></li>
         </ul>
         <button className="md:hidden" onClick={toggleMenu}>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
