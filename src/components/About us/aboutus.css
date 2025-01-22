@@ -1,4 +1,5 @@
 .about-section {
+  margin-left: -100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -27,6 +28,7 @@
 
 .about-image-container img {
   max-width: 50%;
+  margin-left: 90px;
   height: auto;
   border-radius: 5px;
   transition: opacity 0.5s ease-in-out;
@@ -49,6 +51,14 @@
   margin-bottom: 1rem;
   display: inline-block;
   font-size: 2.5rem;
+  color: #3a363f; /* Dark gray */
+  text-align: center;
+  font-size: 2.7rem; /* Scales better on smaller devices */
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .about-list {
