@@ -4,7 +4,15 @@ function Map() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
       <div className="container mx-auto p-4 rounded-lg">
-        <h2 className="text-center text-4xl font-bold text-gray-800 mb-8">
+        <h2
+          className="text-center text-4xl font-bold text-gray-800 mb-8 underline decoration-solid decoration-gray-800"
+          style={{ fontFamily: "'Times New Roman', Times, serif" ,
+            fontStyle: 'italic', fontsize: '2.7rem',
+            fontweight: 'bold',
+            texttransform: 'uppercase',
+            
+          }}
+        >
           LOCATION
         </h2>
         <div className="text-center mb-4">
@@ -18,11 +26,12 @@ function Map() {
           target="_blank"
           rel="noopener noreferrer"
         >
+          {/* Full-width map image, responsive height */}
           <img
-            src="src/components/Img/Map.png"
-            alt="Map"
-            className="w-full h-auto rounded-lg border border-gray-200"
-          />
+  src="src/components/Img/map.png"
+  alt="Map showing location along Nyeri-Mathari Road"
+  className="w-100vw h-auto rounded-lg border border-gray-200 max-width: [desired_max_width]"
+/>
         </a>
       </div>
     </div>
