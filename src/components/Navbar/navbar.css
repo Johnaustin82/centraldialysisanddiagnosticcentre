@@ -1,61 +1,59 @@
 /* Navbar.css */
 
 .glass-navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw; 
-    margin: 0; 
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw; 
+  height: auto;
+  /* background: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(10px); 
+   */
+  z-index: 100; 
+  display: flex; /* Flexbox for horizontal layout */
+  justify-content: space-between; /* Space between logo and buttons */
+  align-items: center; /* Center vertically */
+}
 
-    /* background: rgba(255, 255, 255, 0.2); 
-    backdrop-filter: blur(10px); 
-     */
-    z-index: 100; 
-    display: flex; /* Flexbox for horizontal layout */
-    justify-content: space-between; /* Space between logo and buttons */
-    align-items: center; /* Center vertically */
-  }
-  
-  .logo {
-    display: flex; /* Allow for flexbox within logo */
-    align-items: center; /* Center vertically */
-    height: 10px;
-  }
-  
-  .logo img { 
-    width: 100px; /* Adjust image size as needed */
-    margin-right: 10px; /* Optional spacing between image and text */
-  }
-  
-  .logo-text {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .nav-links {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .nav-button {
-    padding: 0.5rem 1rem;
-    background: rgba(255, 255, 255, 0); 
-    border: none;
-    border-radius: 5px;
-    color: #333;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease; /* Combine transitions for smoother effect */
-  }
-  
-  .nav-button:hover {
-    background: #000; /* Black background */
-    margin-top: 0;
-    color: #fff; /* White text */
-    height: 100px;
-    top: 0;
-    font-size: 1.7rem; /* Increase font size */
-    transform: scale(1.05); 
-    margin-bottom: -70px;
-  }
+.logo {
+  display: flex; /* Allow for flexbox within logo */
+  align-items: center; /* Center vertically */
+  height: 100px; 
+  padding:  60px; /* Removed vertical padding */
+}
+
+.logo img { 
+  width: 150px; /* Increased logo size */ 
+  margin-right: 10px; /* Optional spacing between image and text */
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-button {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0); 
+  border: none;
+  border-radius: 5px;
+  color: #053c8f;
+  font-size: 1.9rem;
+  font-family:'Roboto', Times, serif;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Combine transitions for smoother effect */
+}
+
+.nav-button:hover {
+  background: #000; /* Black background */
+  color: #fff; /* White text */
+  transform: translateY(40px); /* Move button upwards on hover */ 
+  height: 100px;
+  font-size: 30px;
+}

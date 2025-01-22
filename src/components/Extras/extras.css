@@ -11,7 +11,7 @@
   /* Card styles */
   .group {
     position: relative;
-    width: 320px;
+    width: 420px;
     height: 288px;
     background-color: #eaebec; /* Light background */
     display: flex;
@@ -28,7 +28,7 @@
     content: "";
     position: absolute;
     top: 0;
-    width: 320px;
+    width: 420px;
     height: 96px;
     background: #7cc4f8; /* Gradient background */
     border-top-left-radius: 16px;
@@ -37,10 +37,13 @@
   }
   
   .group:hover::before {
-    width: 320px;
+    width: 420px;
     height: 288px;
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
+  }
+  .extra-info{
+    margin-bottom: -50px;
   }
   
   /* Profile picture styles */
@@ -73,14 +76,16 @@
   }
   
   .group:hover .profile-picture {
-    transform: scale(0.9) translate(-96px, -80px);
+    transform: scale(1.1) translate(-96px, -80px);
     margin-bottom: -80px;
+    margin-left: -40px;
     
   }
   
   .profile-details {
     z-index: 10;
     transition: all 0.5s ease;
+    margin-bottom: -30px;
   }
   
   .group:hover .profile-details {
