@@ -4,27 +4,32 @@
   position: relative;
   top: 0;
   left: 0;
-  width: 100vw; 
-  height: auto;
-  /* background: rgba(255, 255, 255, 0.2); 
-  backdrop-filter: blur(10px); 
-   */
-  z-index: 100; 
-  display: flex; /* Flexbox for horizontal layout */
-  justify-content: space-between; /* Space between logo and buttons */
-  align-items: center; /* Center vertically */
+  width: 100%;
+  padding: 1rem 2rem;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.logo-container { /* Added a container for the logo */
+  position: fixed; /* Make the logo container fixed */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure logo is on top of the dropdown */
+  padding: 1rem 2rem; /* Match navbar padding */
+  background-color: inherit; /* Inherit background color from navbar */
 }
 
 .logo {
-  display: flex; /* Allow for flexbox within logo */
-  align-items: center; /* Center vertically */
-  height: 100px; 
-  padding:  60px; /* Removed vertical padding */
+  display: flex;
+  align-items: center;
 }
 
 .logo img { 
-  width: 150px; /* Increased logo size */ 
-  margin-right: 10px; /* Optional spacing between image and text */
+  width: 150px; 
+  margin-right: 10px; 
 }
 
 .logo-text {
@@ -40,20 +45,76 @@
 
 .nav-button {
   padding: 0.5rem 1rem;
-  background: rgba(255, 255, 255, 0); 
+  background: transparent; 
   border: none;
   border-radius: 5px;
   color: #053c8f;
-  font-size: 1.9rem;
-  font-family:'Roboto', Times, serif;
+  font-size: 1.7rem;
+  font-family: 'Roboto', Times, serif;
   cursor: pointer;
-  transition: all 0.3s ease; /* Combine transitions for smoother effect */
+  transition: all 0.3s ease; 
 }
 
 .nav-button:hover {
-  background: #000; /* Black background */
-  color: #fff; /* White text */
-  transform: translateY(40px); /* Move button upwards on hover */ 
-  height: 100px;
-  font-size: 30px;
+  color: #ffffff; /* Changed hover color to black */
+  background: black;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .logo img {
+    width: 100px; 
+    
+  }
+  .nav-links {
+    display: list-item; /* Hide the main navigation on small screens */
+  }
+}
+
+/* Style for the mobile menu */
+.mobile-menu {
+  position: fixed; /* Make the menu fixed to the viewport */
+  top: 0; 
+  left: 0;
+  right: 0; 
+  bottom: 0; /* Extend the menu to the bottom of the viewport */
+  background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%); 
+  transition: transform 0.3s ease-in-out; 
+}
+
+.mobile-menu.active {
+  transform: translateY(0); /* Show the menu */
+}
+
+.mobile-menu-content {
+  background-color: #fff; 
+  padding: 20px; 
+  border-radius: 5px; 
+  text-align: center;
+}
+
+.mobile-menu-content ul {
+  list-style: none;
+  padding: 0; 
+}
+
+.mobile-menu-content li {
+  margin-bottom: 15px; 
+}
+
+.mobile-menu-content a {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none; 
+}
+
+.mobile-menu-content a:hover {
+  background-color: #f0f0f0; 
 }
