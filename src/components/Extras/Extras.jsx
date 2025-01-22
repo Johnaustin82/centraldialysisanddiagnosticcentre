@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./extras.css";
 
 const Extras = () => {
@@ -27,8 +27,8 @@ const Extras = () => {
           />
         </div>
         <div className="profile-details">
-          <span className="profile-name">learn About Kidneys</span>
-          <p className="profile-role">Learn more</p>
+          <span className="profile-name">Learn about Kidneys</span>
+          {/* <p className="profile-role">Learn more</p> */} {/* Removed for cleaner design */}
           {/* Conditional rendering of extra info */}
           {hoveredCardIndex === 0 && (
             <div className="extra-info">
@@ -53,7 +53,7 @@ const Extras = () => {
         </div>
         <div className="profile-details">
           <span className="profile-name">Decade plus working with you</span>
-          <p className="profile-role">Learn more</p>
+          {/* <p className="profile-role">Learn more</p> */} {/* Removed for cleaner design */}
           {/* Conditional rendering of extra info */}
           {hoveredCardIndex === 1 && (
             <div className="extra-info">
@@ -78,7 +78,7 @@ const Extras = () => {
         </div>
         <div className="profile-details">
           <span className="profile-name">Mark your visiting days</span>
-          <p className="profile-role">Learn more</p>
+          {/* <p className="profile-role">Learn more</p> */} {/* Removed for cleaner design */}
           {/* Conditional rendering of extra info */}
           {hoveredCardIndex === 2 && (
             <div className="extra-info">

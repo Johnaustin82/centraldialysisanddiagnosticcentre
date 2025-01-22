@@ -33,7 +33,7 @@ const AboutUs = () => {
         </ul>
       </div>
       <div className="about-image-container">
-        <img src={images[currentImageIndex]} alt="About us image" />
+        <img src={images[currentImageIndex]} alt="About us image" className="about-image" />
       </div>
     </section>
   );
