@@ -1,23 +1,22 @@
 .about-section {
-  margin-left: -100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
   padding: 50px;
+  gap: 2rem; /* Adds spacing between elements */
 }
 
 .about-text {
   flex: 1;
   padding: 3rem;
   text-align: left;
-  padding: 130px;
-  
   margin-right: 2rem;
 }
 
 .about-text-content {
-  font-size: 1.9rem; /* Adjust font size for responsiveness */
+  font-size: 1.8rem; /* Adjust font size for a clean look */
+  line-height: 1.6; /* Improves readability */
 }
 
 .about-image-container {
@@ -27,22 +26,26 @@
 }
 
 .about-image-container img {
-  max-width: 50%;
-  margin-left: 90px;
+  max-width: 80%; /* Slightly larger for better visibility */
+  margin: 0 auto; /* Center the image */
   height: auto;
-  border-radius: 5px;
-  transition: opacity 0.5s ease-in-out;
+  border-radius: 10px; /* Softer corners */
+  transition: transform 0.3s ease-in-out; /* Add a hover effect */
+}
+
+.about-image-container img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
 }
 
 .about-image-container::before {
   content: "";
   position: absolute;
-  top: -25px;
-  left: -25px;
-  right: -25px;
-  bottom: -25px;
-  border-radius: 5px;
-  
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.05); /* Subtle shadow effect */
   z-index: -1;
 }
 
@@ -53,45 +56,52 @@
   font-size: 2.5rem;
   color: #3a363f; /* Dark gray */
   text-align: center;
-  font-size: 2.7rem; /* Scales better on smaller devices */
   font-weight: bold;
   font-family: 'Times New Roman', Times, serif;
   font-style: italic;
   text-transform: uppercase;
-  margin-bottom: 20px;
 }
 
 .about-list {
   list-style-type: disc;
   margin-left: 20px;
-  font-size: 1.9rem;
+  font-size: 1.8rem;
+  line-height: 1.5;
 }
 
 @media screen and (max-width: 768px) {
   .about-section {
-    flex-direction: column;
+    flex-direction: column; /* Stacks items vertically */
     align-items: center;
     padding: 2rem;
+    gap: 1.5rem; /* Adds space between stacked elements */
   }
 
-  .about-text, .about-list
-  .about-image-container {
-    flex: 1;
-    margin: 1rem 0;
-    text-align: center;
+  .about-text {
+    padding: 1.5rem; /* Reduce padding on smaller screens */
+    margin-right: 0; /* No margin for centered layout */
+    text-align: center; /* Center-align text on mobile */
   }
 
-  .about-image {
-    width: 80%;
-    margin-bottom: 2rem;
+  .about-text-content {
+    font-size: 1.4rem; /* Smaller font size for readability */
+    line-height: 1.4; /* Adjust line height accordingly */
+  }
+
+  .about-image-container img {
+    max-width: 90%; /* Adjust image size for smaller screens */
+    margin: 0 auto; /* Center the image */
   }
 
   .about-heading {
+    font-size: 2rem; /* Adjust heading size for smaller screens */
     text-align: center;
-    font-size: 2.2rem;
   }
 
-  .about-text-content, .about-list {
-    font-size: 1.2rem; /* Reduce font size on smaller screens */
+  .about-list {
+    font-size: 1.4rem; /* Smaller font size for lists */
+    margin-left: 0; /* Center-align lists */
+    padding: 0; /* Remove unnecessary padding */
+    text-align: left;
   }
 }

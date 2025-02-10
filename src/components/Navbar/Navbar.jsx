@@ -36,8 +36,8 @@ function Navbar() {
           <li><a href="#map-section" className="nav-button">Location</a></li>
         </ul>
         <button className="md:hidden" onClick={toggleMenu}>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
         </button>
       </nav>
@@ -48,10 +48,42 @@ function Navbar() {
         }`}
       >
         <ul>
-          <li><a href="#" className="block py-2 px-4 text-gray-700 hover:bg-blue-500 hover:text-white" onClick={toggleMenu}>Home</a></li>
-          <li><a href="#" className="block py-2 px-4 text-gray-700 hover:bg-blue-500 hover:text-white" onClick={toggleMenu}>About Us</a></li>
-          <li><a href="#" className="block py-2 px-4 text-gray-700 hover:bg-blue-500 hover:text-white" onClick={toggleMenu}>Contact Us</a></li>
-          <li><a href="#" className="block py-2 px-4 text-gray-700 hover:bg-blue-500 hover:text-white" onClick={toggleMenu}>Location</a></li>
+          <li>
+            <a
+              href="#homepage-section"
+              className="block py-2 px-4 text-gray-700 hover:bg-blue-500 hover:text-white"
+              onClick={() => setIsMenuOpen(false)} /* Close menu after clicking */
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="#aboutus-section"
+              className="block py-2 px-4 text-gray-700 hover:bg-blue-500 hover:text-white"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              About Us
+            </a>
+          </li>
+          <li>
+            <a
+              href="#footer-section"
+              className="block py-2 px-4 text-gray-700 hover:bg-blue-500 hover:text-white"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact Us
+            </a>
+          </li>
+          <li>
+            <a
+              href="#map-section"
+              className="block py-2 px-4 text-gray-700 hover:bg-blue-500 hover:text-white"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Location
+            </a>
+          </li>
         </ul>
       </div>
     </header>
