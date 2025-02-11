@@ -28,7 +28,7 @@ function Map() {
         >
           {/* Full-width map image, responsive height */}
           <img
-  src="src/components/Img/map.png"
+  src="public/Img/map.png"
   alt="Map showing location along Nyeri-Mathari Road"
   className="w-100vw h-auto rounded-lg border border-gray-200 max-width: [desired_max_width]"
 />

@@ -7,7 +7,7 @@ function Homepage() {
       <div 
         className="relative bg-cover bg-center h-screen" 
         style={{ 
-          backgroundImage: "url('src/components/Img/home.jpg')" 
+          backgroundImage: "url('public/Img/home.jpg')" 
         }}
       >
         <Navbar /> 
