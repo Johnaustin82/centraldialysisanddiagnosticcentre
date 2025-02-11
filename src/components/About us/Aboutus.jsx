@@ -4,9 +4,9 @@ import './aboutus.css';
 const AboutUs = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
-    'public/Img/reception.jpg',
-    'public/Img/dialysismachine.jpg',
-    'public/Img/doc.png',
+    '/Img/reception.jpg',
+    '/Img/dialysismachine.jpg',
+    '/Img/doc.png',
     // Add more image paths here
   ];
 

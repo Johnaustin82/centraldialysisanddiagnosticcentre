@@ -22,7 +22,7 @@ const Extras = () => {
       >
         <div className="profile-picture">
           <img
-            src="public/Img/extras_1.png"
+            src="/Img/extras_1.png"
             alt="learn About Kidneys"
           />
         </div>
@@ -47,7 +47,7 @@ const Extras = () => {
       >
         <div className="profile-picture">
           <img
-            src="public/Img/10.png"
+            src="/Img/10.png"
             alt="10 plus"
           />
         </div>
@@ -72,7 +72,7 @@ const Extras = () => {
       >
         <div className="profile-picture">
           <img
-            src="public/Img/calender.png"
+            src="/Img/calender.png"
             alt="calender"
           />
         </div>

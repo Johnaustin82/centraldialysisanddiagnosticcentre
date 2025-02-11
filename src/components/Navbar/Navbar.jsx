@@ -26,7 +26,7 @@ function Navbar() {
   return (
     <header className="glass-navbar">
       <div className="logo">
-        <img src="public/Img/logo.png" alt="Your Logo" />
+        <img src="/Img/logo.png" alt="Your Logo" />
       </div>
       <nav className="nav-links">
         <ul className="hidden md:flex"> {/* Hide on small screens */}
