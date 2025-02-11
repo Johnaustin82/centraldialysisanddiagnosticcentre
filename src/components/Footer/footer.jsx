@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="bg-gray-800 text-gray-300 py-12">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         <div className="mb-8 md:mb-0">
-          <h2 className="text-2xl font-bold text-white">About CentraL Dialysis</h2>
+          <h2 className="text-2xl font-bold text-white">About Central Dialysis</h2>
           <p className="mt-2">
             Our facility ensures comfort,reliability
             <br/>
@@ -36,7 +36,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="border-t border-gray-700 mt-8 pt-4 text-center text-gray-500">
-        <p>Copyright © Central dialysis 2024</p>
+        <p>Copyright © Central dialysis 2025</p>
       </div>
     </footer>
   );
