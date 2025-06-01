@@ -4,11 +4,12 @@ import './aboutus.css';
 const AboutUs = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
-    '/Img/reception.jpg',
+    '/Img/Reception.jpg',
+    '/Img/Vincentatreception.jpg',
+    '/Img/waitingarea.jpg',
+    '/Img/bed.jpg',
     '/Img/dialysismachine.jpg',
     '/Img/doc.png',
-    '/Img/photo_2025-05-25_03-19-39.jpg',
-    'Img/photo_2025-05-25_03-19-44.jpg',
     // Add more image paths here
   ];
 
