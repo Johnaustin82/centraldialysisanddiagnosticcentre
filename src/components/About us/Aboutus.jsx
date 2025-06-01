@@ -7,6 +7,8 @@ const AboutUs = () => {
     '/Img/reception.jpg',
     '/Img/dialysismachine.jpg',
     '/Img/doc.png',
+    '/Img/photo_2025-05-25_03-19-39.jpg',
+    'Img/photo_2025-05-25_03-19-44.jpg',
     // Add more image paths here
   ];
 

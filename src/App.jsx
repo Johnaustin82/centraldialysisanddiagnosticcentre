@@ -6,6 +6,7 @@ import Footer from './components/Footer/footer';
 import AboutUs from './components/About us/Aboutus';
 import Requirements from './components/Requirements/Requirements';
 import Extras from './components/Extras/Extras';
+import DialysisClinicSchedule from './components/Calender';
 
 
 
@@ -18,6 +19,7 @@ function App() {
       <section id="aboutus-section">
         <AboutUs />
         <Requirements />
+        <DialysisClinicSchedule/>
         <Extras />
       </section>
       <section id="map-section">

@@ -1,0 +1,328 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.calendar-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(33, 150, 243, 0.1);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+.header {
+  background: linear-gradient(135deg, #2196f3, #03a9f4);
+  color: white;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="80" r="2.5" fill="rgba(255,255,255,0.1)"/></svg>');
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  position: relative;
+  z-index: 1;
+}
+
+.doctor-selector {
+  padding: 20px 30px;
+  background: #f8fbff;
+  border-bottom: 1px solid #e1f5fe;
+}
+
+.doctor-cards {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.doctor-card {
+  background: white;
+  border: 2px solid #e3f2fd;
+  border-radius: 12px;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 200px;
+}
+
+.doctor-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(33, 150, 243, 0.15);
+  border-color: #2196f3;
+}
+
+.doctor-card.active {
+  background: linear-gradient(135deg, #2196f3, #03a9f4);
+  color: white;
+  border-color: #1976d2;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(33, 150, 243, 0.3);
+}
+
+.doctor-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #81d4fa, #4fc3f7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.doctor-card.active .doctor-avatar {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.doctor-info h3 {
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+
+.doctor-info p {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.calendar-section {
+  padding: 30px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.month-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-btn {
+  background: linear-gradient(135deg, #2196f3, #03a9f4);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.nav-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
+}
+
+.current-month {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1976d2;
+  text-align: center;
+  min-width: 200px;
+}
+
+.legend {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.available {
+  background: #4caf50;
+}
+.busy {
+  background: #ff9800;
+}
+.unavailable {
+  background: #f44336;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  background: #e1f5fe;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(33, 150, 243, 0.1);
+}
+
+.day-header {
+  background: linear-gradient(135deg, #2196f3, #03a9f4);
+  color: white;
+  padding: 15px 5px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.calendar-day {
+  background: white;
+  min-height: 80px;
+  padding: 8px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar-day:hover {
+  background: #f0f8ff;
+  transform: scale(1.02);
+  z-index: 2;
+  box-shadow: 0 5px 15px rgba(33, 150, 243, 0.2);
+}
+
+.day-number {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.other-month {
+  opacity: 0.3;
+}
+
+.today {
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb) !important;
+  border: 2px solid #2196f3;
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.time-slot {
+  font-size: 0.7rem;
+  background: rgba(33, 150, 243, 0.1);
+  border-radius: 4px;
+  padding: 2px 4px;
+  margin: 1px 0;
+  text-align: center;
+  color: #1976d2;
+}
+
+.appointment-count {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background: #2196f3;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .calendar-container {
+    margin: 10px;
+    border-radius: 15px;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .doctor-cards {
+    flex-direction: column;
+  }
+
+  .calendar-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .legend {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .calendar-day {
+    min-height: 60px;
+    font-size: 0.8rem;
+  }
+}
