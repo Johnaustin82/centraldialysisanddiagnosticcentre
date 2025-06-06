@@ -38,35 +38,7 @@ const DialysisClinicSchedule = () => {
 
   // Doctor schedule data
   const [doctorSchedules, setDoctorSchedules] = useState({
-    '2025-06-02': [
-      { id: 1, doctor: 'Dr. Patrick', specialty: 'Nephrology', shift: 'Morning', time: '06:00 - 14:00', status: 'scheduled', patients: 12 },
-      { id: 2, doctor: 'Dr. James', specialty: 'Internal Medicine', shift: 'Afternoon', time: '14:00 - 22:00', status: 'scheduled', patients: 10 },
-      { id: 3, doctor: 'Dr. Emily', specialty: 'Nephrology', shift: 'On-Call', time: '22:00 - 06:00', status: 'on-call', patients: 0 }
-    ],
-    '2025-06-03': [
-      { id: 4, doctor: 'Dr. Michael Thompson', specialty: 'Nephrology', shift: 'Morning', time: '06:00 - 14:00', status: 'scheduled', patients: 15 },
-      { id: 5, doctor: 'Dr. Lisa Patel', specialty: 'Internal Medicine', shift: 'Afternoon', time: '14:00 - 22:00', status: 'scheduled', patients: 11 },
-      { id: 6, doctor: 'Dr. Robert Kim', specialty: 'Emergency Medicine', shift: 'On-Call', time: '22:00 - 06:00', status: 'on-call', patients: 0 }
-    ],
-    '2025-06-04': [
-      { id: 7, doctor: 'Dr. Sarah Mitchell', specialty: 'Nephrology', shift: 'Morning', time: '06:00 - 14:00', status: 'scheduled', patients: 13 },
-      { id: 8, doctor: 'Dr. Amanda Foster', specialty: 'Nephrology', shift: 'Afternoon', time: '14:00 - 22:00', status: 'scheduled', patients: 9 },
-      { id: 9, doctor: 'Dr. James Rodriguez', specialty: 'Internal Medicine', shift: 'On-Call', time: '22:00 - 06:00', status: 'on-call', patients: 0 }
-    ],
-    '2025-06-05': [
-      { id: 10, doctor: 'Dr. Emily Chen', specialty: 'Nephrology', shift: 'Morning', time: '06:00 - 14:00', status: 'scheduled', patients: 14 },
-      { id: 11, doctor: 'Dr. Michael Thompson', specialty: 'Nephrology', shift: 'Afternoon', time: '14:00 - 22:00', status: 'scheduled', patients: 12 }
-    ],
-    '2025-06-06': [
-      { id: 12, doctor: 'Dr. Lisa Patel', specialty: 'Internal Medicine', shift: 'Morning', time: '06:00 - 14:00', status: 'scheduled', patients: 11 },
-      { id: 13, doctor: 'Dr. Robert Kim', specialty: 'Emergency Medicine', shift: 'Afternoon', time: '14:00 - 22:00', status: 'scheduled', patients: 8 },
-      { id: 14, doctor: 'Dr. Amanda Foster', specialty: 'Nephrology', shift: 'On-Call', time: '22:00 - 06:00', status: 'on-call', patients: 0 }
-    ],
-    '2025-06-10': [
-        { id: 12, doctor: 'Dr. Lisa Patel', specialty: 'Internal Medicine', shift: 'Morning', time: '06:00 - 14:00', status: 'scheduled', patients: 11 },
-        { id: 13, doctor: 'Dr. Robert Kim', specialty: 'Emergency Medicine', shift: 'Afternoon', time: '14:00 - 22:00', status: 'scheduled', patients: 8 },
-        { id: 14, doctor: 'Dr. Amanda Foster', specialty: 'Nephrology', shift: 'On-Call', time: '22:00 - 06:00', status: 'on-call', patients: 0 }
-      ]
+
   });
 
   const months = [
